@@ -1,0 +1,42 @@
+.listItem {
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  display: block;
+
+  width: 10px;
+  height: 10px;
+
+  margin-right: 14px;
+
+  border-radius: 50%;
+  background-color: var(--green-color);
+}
+
+.circleList {
+  display: flex;
+  justify-content: space-between;
+}
+
+.circleListItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.iconCircle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 60px;
+  height: 60px;
+
+  border-radius: 50%;
+  background-color: var(--green-color);
+}
+.icon {
+  width: 30px;
+  height: auto;
+}
