@@ -15,6 +15,14 @@ const FourteenthMainPart: FC = () => {
           alt="fourteenthImg2"
         />
       </div>
+      <div>
+        <p>30-Day Money-Back Guarantee</p>
+        <p>
+          All products come with a 30-day money-back guarantee. If the product
+          does not work for you, simply return it, and we will issue you a full
+          refund, no questions asked.
+        </p>
+      </div>
     </div>
   );
 };

@@ -79,7 +79,7 @@ const HomePage: FC = () => {
           <ThirteenthMainPart />
         </Container>
       </section>
-      <section>
+      <section className={styles.blueSection}>
         <Container>
           <FourteenthMainPart />
         </Container>
