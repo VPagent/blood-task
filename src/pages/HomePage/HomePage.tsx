@@ -10,6 +10,13 @@ import FourthMainPart from "../../components/FourthMainPart";
 import FifthMainPart from "../../components/FifthMainPart";
 import SixthMainPart from "../../components/SixthMainPart";
 import SeventhMainPart from "../../components/SeventhMainPart/SeventhMainPart";
+import EighthMainPart from "../../components/EighthMainPart/EighthMainPart";
+import NinthMainPart from "../../components/NinthMainPart/NinthMainPart";
+import TenthMainPart from "../../components/TenthMainPart/TenthMainPart";
+import EleventhMainPart from "../../components/EleventhMainPart/EleventhMainPart";
+import TwelfthMainPart from "../../components/TwelfthMainPart/TwelfthMainPart";
+import ThirteenthMainPart from "../../components/ThirteenthMainPart/ThirteenthMainPart";
+import FourteenthMainPart from "../../components/FourteenthMainPart/FourteenthMainPart";
 
 const HomePage: FC = () => {
   return (
@@ -42,7 +49,41 @@ const HomePage: FC = () => {
           <SeventhMainPart />
         </Container>
       </section>
-
+      <section>
+        <Container>
+          <EighthMainPart />
+        </Container>
+      </section>
+      <section className={styles.blueSection}>
+        <Container>
+          <NinthMainPart />
+        </Container>
+      </section>
+      <section>
+        <Container>
+          <TenthMainPart />
+        </Container>
+      </section>
+      <section className={styles.blueSection}>
+        <Container>
+          <EleventhMainPart />
+        </Container>
+      </section>
+      <section>
+        <Container>
+          <TwelfthMainPart />
+        </Container>
+      </section>
+      <section className={styles.backgroundSection}>
+        <Container>
+          <ThirteenthMainPart />
+        </Container>
+      </section>
+      <section>
+        <Container>
+          <FourteenthMainPart />
+        </Container>
+      </section>
       <Footer />
     </>
   );

@@ -13,3 +13,12 @@
   background-image: url("../../static/png/bcg5section1x.png");
   background-size: cover;
 }
+
+.backgroundSection {
+  padding: 40px 0px;
+  background-image: url("../../static/png/backgrounds/13_1.png"),
+    url("../../static/png/backgrounds/13_2.png");
+  background-position: right bottom, left top;
+  background-repeat: no-repeat, repeat;
+  background-size: cover, cover;
+}
