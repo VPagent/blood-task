@@ -2,6 +2,7 @@ import { FC } from "react";
 import styles from "./FourteenthMainPart.module.scss";
 import fourteenthImg1 from "../../static/png/14_1.png";
 import fourteenthImg2 from "../../static/png/14_2.png";
+import RewardsPanel from "../RewardsPanel/RewardsPanel";
 
 const FourteenthMainPart: FC = () => {
   return (
@@ -23,6 +24,7 @@ const FourteenthMainPart: FC = () => {
           refund, no questions asked.
         </p>
       </div>
+      <RewardsPanel />
     </div>
   );
 };

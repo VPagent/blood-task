@@ -1,22 +1,54 @@
-.rewardsBox {
+.mainTitle {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 20px;
+  padding: 0px 16px;
+
+  font-weight: 800;
+  font-size: 32px;
+  text-align: center;
 }
 
-.rewardsBox_item {
-  &:not(:last-of-type) {
-    margin-right: 20px;
-  }
+.greenText {
+  color: var(--green-color);
 }
 
+.rewardsPanel {
+  margin-top: 40px;
+}
+
+.fakeSlider {
+  margin-top: 20px;
+}
+
+.mainImg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 .fakeSliderControls {
   display: flex;
   align-items: center;
+  justify-content: center;
+
+  margin-top: 20px;
+}
+.btn {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  &:not(:last-of-type) {
+    margin-right: 8px;
+  }
 }
 
 .goodImg {
   display: block;
 
-  width: 50px;
-  height: 50px;
+  width: 100%;
+  height: auto;
 }

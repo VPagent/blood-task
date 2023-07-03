@@ -1,5 +1,6 @@
 @import "./static/sass/reset.scss";
 @import "./static/sass/variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&family=Work+Sans:wght@400;500;600;700;800&display=swap");
 
 body {
   margin: 0;
@@ -8,6 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "Work Sans", sans-serif;
 }
 
 code {

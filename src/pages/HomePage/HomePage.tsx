@@ -17,6 +17,9 @@ import EleventhMainPart from "../../components/EleventhMainPart/EleventhMainPart
 import TwelfthMainPart from "../../components/TwelfthMainPart/TwelfthMainPart";
 import ThirteenthMainPart from "../../components/ThirteenthMainPart/ThirteenthMainPart";
 import FourteenthMainPart from "../../components/FourteenthMainPart/FourteenthMainPart";
+import FifteenthMainPart from "../../components/FifteenthMainPart/FifteenthMainPart";
+import CustomerFaqMainPart from "../../components/CustomerFaqMainPart/CustomerFaqMainPart";
+import ReviewsMainPart from "../../components/ReviewsMainPart/ReviewsMainPart";
 
 const HomePage: FC = () => {
   return (
@@ -82,6 +85,21 @@ const HomePage: FC = () => {
       <section className={styles.blueSection}>
         <Container>
           <FourteenthMainPart />
+        </Container>
+      </section>
+      <section>
+        <Container>
+          <FifteenthMainPart />
+        </Container>
+      </section>
+      <section>
+        <Container>
+          <CustomerFaqMainPart />
+        </Container>
+      </section>
+      <section>
+        <Container>
+          <ReviewsMainPart />
         </Container>
       </section>
       <Footer />

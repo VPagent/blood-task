@@ -1,16 +1,13 @@
 import { FC, SyntheticEvent, useState } from "react";
 import styles from "./FirstMainPart.module.scss";
 import Container from "../Container/Container";
-import firstR from "../../static/png/image87.png";
-import secondR from "../../static/png/image88.png";
-import thirdR from "../../static/png/image89.png";
-import fourthR from "../../static/png/image90.png";
 import good1 from "../../static/png/23.png";
-import good2 from "../../static/png/LiquidBeets2.png";
-import good3 from "../../static/png/LiquidBeets3.png";
-import good4 from "../../static/png/LiquidBeets4.png";
-import good5 from "../../static/png/LiquidBeets5.png";
-import good6 from "../../static/png/LiquidBeets6.png";
+import good2 from "../../static/png/1_1_2.png";
+import good3 from "../../static/png/1_1_3.png";
+import good4 from "../../static/png/1_1_4.png";
+import good5 from "../../static/png/1_1_5.png";
+import good6 from "../../static/png/1_1_1.png";
+import RewardsPanel from "../RewardsPanel";
 
 const FirstMainPart: FC = () => {
   const [currentImg, setCurrentImg] = useState(good1);
@@ -42,44 +39,31 @@ const FirstMainPart: FC = () => {
 
   return (
     <div>
-      <h1>
+      <h1 className={styles.mainTitle}>
         Support Your Blood Pressure With
         <span className={styles.greenText}>Nitric Oxide Flow</span>
       </h1>
-      <div className={styles.rewardsBox}>
-        <div className={styles.rewardsBox_item}>
-          <img src={fourthR} alt="" />
-        </div>
-        <div className={styles.rewardsBox_item}>
-          <img src={thirdR} alt="" />
-        </div>
-        <div className={styles.rewardsBox_item}>
-          <img src={secondR} alt="" />
-        </div>
-        <div className={styles.rewardsBox_item}>
-          <img src={firstR} alt="" />
-        </div>
-      </div>
+      <RewardsPanel className={styles.rewardsPanel} />
 
       <div className={styles.fakeSlider}>
-        <img src={currentImg} alt="" />
+        <img className={styles.mainImg} src={currentImg} alt="" />
         <div className={styles.fakeSliderControls}>
-          <button name="good1" onClick={handleChangeImg}>
+          <button className={styles.btn} name="good1" onClick={handleChangeImg}>
             <img className={styles.goodImg} src={good1} alt="" />
           </button>
-          <button name="good2" onClick={handleChangeImg}>
+          <button className={styles.btn} name="good2" onClick={handleChangeImg}>
             <img className={styles.goodImg} src={good2} alt="" />
           </button>
-          <button name="good3" onClick={handleChangeImg}>
+          <button className={styles.btn} name="good3" onClick={handleChangeImg}>
             <img className={styles.goodImg} src={good3} alt="" />
           </button>
-          <button name="good4" onClick={handleChangeImg}>
+          <button className={styles.btn} name="good4" onClick={handleChangeImg}>
             <img className={styles.goodImg} src={good4} alt="" />
           </button>
-          <button name="good5" onClick={handleChangeImg}>
+          <button className={styles.btn} name="good5" onClick={handleChangeImg}>
             <img className={styles.goodImg} src={good5} alt="" />
           </button>
-          <button name="good6" onClick={handleChangeImg}>
+          <button className={styles.btn} name="good6" onClick={handleChangeImg}>
             <img className={styles.goodImg} src={good6} alt="" />
           </button>
         </div>
