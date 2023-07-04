@@ -7,13 +7,13 @@ import { ReactComponent as Timer } from "../../static/icons/timer.svg";
 
 const FifthMainPart: FC = () => {
   return (
-    <div>
+    <div className={styles.sectionWrapper}>
       <img className={styles.mainImage} src={smallContentImage} alt="" />
       <div className={styles.list}>
         <div className={styles.listItem}>
           <div className={styles.listItemHeader}>
             <Hard />
-            <h3>Blood Pressure Support</h3>
+            <h3 className={styles.itemTitle}>Blood Pressure Support</h3>
           </div>
           <p className={styles.listItemFooter}>
             Helps support blood pressure by increasing your overall nitric oxide
@@ -23,7 +23,7 @@ const FifthMainPart: FC = () => {
         <div className={styles.listItem}>
           <div className={styles.listItemHeader}>
             <Veins />
-            <h3>Circulation Support</h3>
+            <h3 className={styles.itemTitle}>Circulation Support</h3>
           </div>
           <p className={styles.listItemFooter}>
             Helps increases blood flow, and circulation throughout the body by
@@ -34,7 +34,7 @@ const FifthMainPart: FC = () => {
         <div className={styles.listItem}>
           <div className={styles.listItemHeader}>
             <Timer />
-            <h3>Fast Recovery</h3>
+            <h3 className={styles.itemTitle}>Fast Recovery</h3>
           </div>
           <p className={styles.listItemFooter}>
             Helps deliver powerful nutrients through better circulation and

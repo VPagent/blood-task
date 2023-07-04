@@ -1,4 +1,102 @@
+@import "../../static/sass/mixins.scss";
+
+.sectionTitle {
+  @include sectionTitle();
+}
+
+.list {
+  margin-top: 40px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:not(:first-of-type) {
+    margin-top: 40px;
+  }
+}
+
+.smallWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0px 16px;
+}
+
+.cardTitle {
+  margin-top: 25px;
+
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: var(--thirdPart-text-color);
+}
+
 .video {
   display: block;
   width: 100%;
+}
+
+.cardContentBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scorePanel {
+  margin-top: 10px;
+}
+
+.cardText {
+  margin-top: 20px;
+  text-align: center;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--thirdPart-text-color);
+}
+
+.author {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.secondaryCardTitle {
+  margin-top: 40px;
+  font-weight: 800;
+  font-size: 25px;
+  text-align: center;
+}
+
+.logoList {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  margin-top: 20px;
+}
+
+.fakeBorder {
+  width: 1px;
+  height: 36px;
+
+  background-color: var(--border-color);
+}
+
+.logoImage {
+  display: block;
+  margin-left: 8px;
+  margin-right: 8px;
+
+  // width: 90px;
+  // height: 36px;
 }

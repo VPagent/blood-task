@@ -14,44 +14,46 @@ import NinthImg2 from "../../static/png/9_2.png";
 const NinthMainPart: FC = () => {
   return (
     <div className={styles.wrapper}>
-      <h2>Poor Circulation?</h2>
-      <p>Increase your circulation by boosting your Nitric Oxide production.</p>
-      <div>
-        <div>
-          <p>Unhealthy</p>
-          <img src={NinthImg1} alt="blood1" />
-          <NinthPartIcon1 />
+      <h2 className={styles.sectionTitle}>Poor Circulation?</h2>
+      <p className={styles.sectionText}>
+        Increase your circulation by boosting your Nitric Oxide production.
+      </p>
+      <div className={styles.imageBox}>
+        <div className={styles.imagePart}>
+          <p className={styles.imageTitle}>Unhealthy</p>
+          <img className={styles.image} src={NinthImg1} alt="blood1" />
+          <NinthPartIcon1 className={styles.icon} />
         </div>
-        <div>
-          <p>Healthy</p>
-          <img src={NinthImg2} alt="blood1" />
-          <NinthPartIcon2 />
+        <div className={styles.imagePart}>
+          <p className={styles.imageTitle}>Healthy</p>
+          <img className={styles.image} src={NinthImg2} alt="blood1" />
+          <NinthPartIcon2 className={styles.icon} />
         </div>
       </div>
       <div className={styles.list}>
         <div className={styles.listItem}>
           <NinthPartIcon3 />
-          <p>Blood Circulation*</p>
+          <p className={styles.listItemText}>Blood Circulation*</p>
         </div>
         <div className={styles.listItem}>
           <NinthPartIcon4 />
-          <p>Blood Pressure Support*</p>
+          <p className={styles.listItemText}>Blood Pressure Support*</p>
         </div>
         <div className={styles.listItem}>
           <NinthPartIcon5 />
-          <p>Heart Healthy Energy*</p>
+          <p className={styles.listItemText}>Heart Healthy Energy*</p>
         </div>
         <div className={styles.listItem}>
           <NinthPartIcon6 />
-          <p>Antioxidants*</p>
+          <p className={styles.listItemText}>Antioxidants*</p>
         </div>
         <div className={styles.listItem}>
           <NinthPartIcon7 />
-          <p>Heart Health Support*</p>
+          <p className={styles.listItemText}>Heart Health Support*</p>
         </div>
         <div className={styles.listItem}>
           <NinthPartIcon8 />
-          <p>Nitric Oxide Production*</p>
+          <p className={styles.listItemText}>Nitric Oxide Production*</p>
         </div>
       </div>
     </div>

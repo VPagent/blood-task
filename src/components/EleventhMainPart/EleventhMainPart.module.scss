@@ -1,9 +1,49 @@
+@import "../../static/sass/mixins.scss";
+
 .secondPartWrapper {
   display: flex;
   flex-direction: column;
 }
 
+.sectionTitle {
+  @include sectionTitle();
+}
+
+.image {
+  margin-top: 40px;
+  padding: 0px 16px;
+
+  border-radius: 20px;
+}
+
 .listItem {
   display: flex;
-  align-items: flex-start;
+  // align-items: flex-start;
+
+  margin-top: 40px;
+}
+
+.iconWrapper {
+  width: 40px;
+  display: flex;
+  justify-content: center;
+}
+.listItemIcon {
+  display: black;
+}
+
+.listItemDescription {
+  margin-left: 20px;
+}
+
+.itemTitle {
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.itemText {
+  margin-top: 5px;
+
+  font-weight: 500;
+  font-size: 16px;
 }

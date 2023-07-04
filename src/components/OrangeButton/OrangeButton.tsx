@@ -3,19 +3,19 @@ import styles from "./OrangeButton.module.scss";
 import cn from "clsx";
 
 type Props = {
-  label: string | ReactNode;
+  children: string | ReactNode;
   onClick: () => void;
   className?: string;
 };
 
-const OrangeButton: FC<Props> = ({ label, onClick, className }) => {
+const OrangeButton: FC<Props> = ({ children, onClick, className }) => {
   return (
     <button
       className={cn(styles.btn, className)}
       onClick={() => onClick()}
       type="button"
     >
-      {label}
+      <p className={styles.btnText}>{children}</p>
     </button>
   );
 };

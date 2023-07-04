@@ -1,3 +1,13 @@
+@import "../../static/sass/mixins.scss";
+
+.sectionTitle {
+  @include sectionTitle();
+}
+
+.list {
+  padding-top: 40px;
+}
+
 .card {
   position: relative;
 
@@ -32,8 +42,20 @@
   padding: 30px 16px;
 }
 
+.cardTitle {
+  text-align: center;
+
+  font-weight: 600;
+  font-size: 28px;
+}
+
 .cardText {
   margin-top: 10px;
+
+  text-align: center;
+
+  font-weight: 500;
+  font-size: 18px;
 }
 
 .chevronToBottom {

@@ -1,9 +1,8 @@
 .blueSection {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
   background-color: var(--blue-color);
-}
-.fourthSection {
-  padding-top: 80px;
-  padding-bottom: 80px;
 }
 
 .fifthSection {
@@ -21,4 +20,9 @@
   background-position: right bottom, left top;
   background-repeat: no-repeat, repeat;
   background-size: cover, cover;
+}
+
+.sectionWithPt80 {
+  padding-top: 80px;
+  padding-bottom: 80px;
 }

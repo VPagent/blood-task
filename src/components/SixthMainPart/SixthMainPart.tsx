@@ -9,8 +9,8 @@ import { ReactComponent as DoubleChevron } from "../../static/icons/doubleChevro
 
 const SixthMainPart: FC = () => {
   return (
-    <div>
-      <h2>Why Is Heart Health So Important?</h2>
+    <div className={styles.sectionWrapper}>
+      <h2 className={styles.sectionTitle}>Why Is Heart Health So Important?</h2>
       <div className={styles.list}>
         <div className={styles.card}>
           <div className={styles.topPart}>

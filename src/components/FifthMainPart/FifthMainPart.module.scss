@@ -1,3 +1,7 @@
+.sectionWrapper {
+  margin-top: 46px;
+}
+
 .mainImage {
   display: block;
 
@@ -5,6 +9,27 @@
   height: auto;
 }
 
+.listItem {
+  &:not(:first-of-type) {
+    margin-top: 20px;
+  }
+}
+
 .listItemHeader {
   display: flex;
+}
+
+.itemTitle {
+  margin-left: 10px;
+
+  font-weight: 800;
+  font-size: 26px;
+  text-transform: uppercase;
+}
+
+.listItemFooter {
+  margin-top: 20px;
+
+  font-weight: 500;
+  font-size: 16px;
 }

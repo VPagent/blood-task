@@ -8,7 +8,7 @@ import natural from "../../static/png/renewableenergy1.png";
 const FourthMainPart: FC = () => {
   return (
     <div>
-      <h2>How Does Nitric Oxide Flow work?</h2>
+      <h2 className={styles.sectionTitle}>How Does Nitric Oxide Flow work?</h2>
       <div className={styles.list}>
         <p className={styles.listItem}>
           <span className={styles.circle}></span>
@@ -40,25 +40,25 @@ const FourthMainPart: FC = () => {
           <div className={styles.iconCircle}>
             <img className={styles.icon} src={vegan} alt="vegan" />
           </div>
-          <p>vegan</p>
+          <p className={styles.iconText}>vegan</p>
         </div>
         <div className={styles.circleListItem}>
           <div className={styles.iconCircle}>
             <img className={styles.icon} src={glutenFree} alt="glutenFree" />
           </div>
-          <p>gluten free</p>
+          <p className={styles.iconText}>gluten free</p>
         </div>
         <div className={styles.circleListItem}>
           <div className={styles.iconCircle}>
             <img className={styles.icon} src={nonGmo} alt="nonGmo" />
           </div>
-          <p>non gmo</p>
+          <p className={styles.iconText}>non gmo</p>
         </div>
         <div className={styles.circleListItem}>
           <div className={styles.iconCircle}>
             <img className={styles.icon} src={natural} alt="natural" />
           </div>
-          <p>all natural</p>
+          <p className={styles.iconText}>all natural</p>
         </div>
       </div>
     </div>

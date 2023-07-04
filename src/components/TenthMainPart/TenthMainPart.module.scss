@@ -1,0 +1,68 @@
+@import "../../static/sass/mixins.scss";
+
+.sectionTitle {
+  @include sectionTitle();
+}
+
+.list {
+  padding-top: 18px;
+}
+
+.mobileCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 0px 16px 40px 16px;
+
+  border-radius: 6px;
+  box-shadow: 0px 4px 10px 0px #00000033;
+}
+
+.image {
+  display: block;
+  width: 100%;
+}
+
+.cardTitle {
+  margin-top: 18px;
+
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.cardDescription {
+  margin-top: 5px;
+
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.cardText {
+  margin-top: 20px;
+
+  text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.paginationBox {
+  margin-top: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paginationBtn {
+  border: none;
+  background-color: transparent;
+  &:disabled .paginationIcon {
+    opacity: 0.5;
+  }
+}
+
+.paginationNum {
+  font-weight: 500;
+  font-size: 24px;
+}

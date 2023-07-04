@@ -31,7 +31,7 @@ const HomePage: FC = () => {
           <SecondMainPart />
         </Container>
       </section>
-      <section>
+      <section className={styles.sectionWithPt80}>
         <Container>
           <ThirdMainPart />
         </Container>
@@ -42,7 +42,7 @@ const HomePage: FC = () => {
           <FifthMainPart />
         </Container>
       </section>
-      <section className={styles.fourthSection}>
+      <section className={styles.sectionWithPt80}>
         <Container>
           <SixthMainPart />
         </Container>
@@ -52,7 +52,7 @@ const HomePage: FC = () => {
           <SeventhMainPart />
         </Container>
       </section>
-      <section>
+      <section className={styles.sectionWithPt80}>
         <Container>
           <EighthMainPart />
         </Container>
@@ -62,7 +62,7 @@ const HomePage: FC = () => {
           <NinthMainPart />
         </Container>
       </section>
-      <section>
+      <section className={styles.sectionWithPt80}>
         <Container>
           <TenthMainPart />
         </Container>

@@ -1,0 +1,76 @@
+@import "../../static/sass/mixins.scss";
+
+.sectionTitle {
+  @include sectionTitle();
+}
+
+.sectionText {
+  margin-top: 20px;
+
+  text-align: center;
+
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.imageTitle {
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.imageBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  margin-top: 40px;
+  padding: 0px 16px;
+}
+
+.imagePart {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:first-of-type {
+    margin-right: 28px;
+  }
+}
+
+.image {
+  display: block;
+  width: 120px;
+  height: auto;
+
+  margin-top: 20px;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  right: -16px;
+}
+
+.list {
+  padding-top: 40px;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+
+  &:not(:first-of-type) {
+    margin-top: 24px;
+  }
+}
+
+.listItemText {
+  margin-left: 10px;
+
+  font-weight: 600;
+  font-size: 24px;
+  text-transform: uppercase;
+}

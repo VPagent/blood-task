@@ -1,6 +1,23 @@
+@import "../../static/sass/mixins.scss";
+
+.sectionTitle {
+  @include sectionTitle();
+}
+
+.list {
+  padding: 30px 16px 40px 16px;
+}
+
 .listItem {
   display: flex;
   align-items: center;
+
+  &:not(:first-of-type) {
+    margin-top: 24px;
+  }
+
+  font-weight: 800;
+  font-size: 20px;
 }
 
 .circle {
@@ -23,6 +40,7 @@
 .circleListItem {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .iconCircle {
@@ -39,4 +57,11 @@
 .icon {
   width: 30px;
   height: auto;
+}
+
+.iconText {
+  margin-top: 5px;
+
+  font-weight: 800;
+  font-size: 14px;
 }

@@ -39,7 +39,7 @@ const SecondMainPart: FC = () => {
         </div>
       </div>
       <div className={styles.btnWrapper}>
-        <OrangeButton label="Try It Now - Risk Free" onClick={() => {}} />
+        <OrangeButton onClick={() => {}}>Try It Now - Risk Free</OrangeButton>
       </div>
     </div>
   );

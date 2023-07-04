@@ -1,7 +1,15 @@
+@import "../../static/sass/mixins.scss";
+
+.sectionTitle {
+  @include sectionTitle();
+}
+
 .list {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  padding: 40px 0px;
 }
 
 .listItem {
@@ -10,4 +18,22 @@
   align-items: center;
 
   margin-top: 40px;
+}
+
+.listItemTitle {
+  margin-top: 20px;
+
+  text-align: center;
+
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.listItemText {
+  margin-top: 10px;
+
+  text-align: center;
+
+  font-weight: 400;
+  font-size: 18px;
 }
