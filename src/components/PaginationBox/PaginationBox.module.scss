@@ -1,0 +1,33 @@
+.paginationBox {
+  margin-top: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paginationBtn {
+  border: none;
+  background-color: transparent;
+  &:disabled .paginationIcon {
+    opacity: 0.5;
+  }
+  color: var(--section-title-color);
+}
+
+.paginationNum {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.paginationIcon {
+  stroke: var(--section-title-color);
+}
+.whiteIcon {
+  color: white;
+  stroke: white;
+}
+
+.whiteText {
+  color: white;
+}

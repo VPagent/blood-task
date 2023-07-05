@@ -6,8 +6,7 @@ import tenthImg1 from "../../static/png/10_1.png";
 import tenthImg2 from "../../static/png/10_2.png";
 import tenthImg3 from "../../static/png/10_3.png";
 import tenthImg4 from "../../static/png/10_4.png";
-import { ReactComponent as ChevronLeft } from "../../static/icons/chevronLeft.svg";
-import { ReactComponent as ChevronRight } from "../../static/icons/chevronRight.svg";
+import PaginationBox from "../PaginationBox/PaginationBox";
 
 const TenthMainPart: FC = () => {
   const [currentCard, setCurrentCard] = useState(1);
@@ -16,13 +15,13 @@ const TenthMainPart: FC = () => {
     query: "(min-width: 1224px)",
   });
 
-  const handleChangeCard = (event: SyntheticEvent<HTMLButtonElement>) => {
-    if (event.currentTarget.name === "increment") {
-      setCurrentCard(currentCard + 1);
-    } else {
-      setCurrentCard(currentCard - 1);
-    }
-  };
+  // const handleChangeCard = (event: SyntheticEvent<HTMLButtonElement>) => {
+  //   if (event.currentTarget.name === "increment") {
+  //     setCurrentCard(currentCard + 1);
+  //   } else {
+  //     setCurrentCard(currentCard - 1);
+  //   }
+  // };
 
   return (
     <div>
@@ -86,25 +85,11 @@ const TenthMainPart: FC = () => {
               </div>
             )}
           </div>
-          <div className={styles.paginationBox}>
-            <button
-              className={styles.paginationBtn}
-              onClick={handleChangeCard}
-              name="decrement"
-              disabled={currentCard === 1}
-            >
-              <ChevronLeft className={styles.paginationIcon} />
-            </button>
-            <p className={styles.paginationNum}>{currentCard}/4</p>
-            <button
-              className={styles.paginationBtn}
-              onClick={handleChangeCard}
-              name="increment"
-              disabled={currentCard === 4}
-            >
-              <ChevronRight className={styles.paginationIcon} />
-            </button>
-          </div>
+          <PaginationBox
+            currentNum={currentCard}
+            allNum={4}
+            onChange={setCurrentCard}
+          />
         </>
       )}
       {isDesktop && (

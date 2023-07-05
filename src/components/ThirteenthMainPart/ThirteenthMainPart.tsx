@@ -5,6 +5,8 @@ import thirteenthImg2 from "../../static/png/13_2.png";
 import thirteenthImg3 from "../../static/png/13_3.png";
 import thirteenthImg4 from "../../static/png/13_4.png";
 import { useMediaQuery } from "react-responsive";
+import PaginationBox from "../PaginationBox/PaginationBox";
+import ScorePanel from "../ScorePanel/ScorePanel";
 
 const ThirteenthMainPart: FC = () => {
   const [currentCard, setCurrentCard] = useState(1);
@@ -13,26 +15,9 @@ const ThirteenthMainPart: FC = () => {
     query: "(min-width: 1224px)",
   });
 
-  const handleChangeCard = (event: SyntheticEvent<HTMLButtonElement>) => {
-    if (event.currentTarget.name === "increment") {
-      if (currentCard === 4) {
-        setCurrentCard(1);
-
-        return;
-      }
-      setCurrentCard(currentCard + 1);
-    } else {
-      if (currentCard === 1) {
-        setCurrentCard(4);
-
-        return;
-      }
-      setCurrentCard(currentCard - 1);
-    }
-  };
   return (
     <div className={styles.wrapper}>
-      <h2>Customer Reviews</h2>
+      <h2 className={styles.sectionTitle}>Customer Reviews</h2>
       {!isDesktop && (
         <div className={styles.fakeSlider}>
           {currentCard === 1 && (
@@ -43,10 +28,10 @@ const ThirteenthMainPart: FC = () => {
                 alt="thirteenthImg1"
               />
               <div className={styles.cardBottom}>
-                <p>—Gennaro P.</p>
-                score
-                <h3>Excellent product</h3>
-                <p>
+                <p className={styles.author}>—Gennaro P.</p>
+                <ScorePanel className={styles.scorePanel} />
+                <h3 className={styles.cardTitle}>Excellent product</h3>
+                <p className={styles.cardText}>
                   "I have noticed a positive difference in my blood pressure and
                   health since I began using this supplement." 
                 </p>
@@ -61,10 +46,10 @@ const ThirteenthMainPart: FC = () => {
                 alt="thirteenthImg2"
               />
               <div className={styles.cardBottom}>
-                <p>—Ronald D.</p>
-                score
-                <h3>Great Product</h3>
-                <p>
+                <p className={styles.author}>—Ronald D.</p>
+                <ScorePanel className={styles.scorePanel} />
+                <h3 className={styles.cardTitle}>Great Product</h3>
+                <p className={styles.cardText}>
                   "Blood pressure was 142/86 before taking Nitric Oxide Flow and
                   after 3 bottles my BP was 118/74. I am going to use it until
                   next wellness dr visit and will let you know what BP is then.
@@ -81,10 +66,10 @@ const ThirteenthMainPart: FC = () => {
                 alt="thirteenthImg3"
               />
               <div className={styles.cardBottom}>
-                <p>—Charles V.</p>
-                score
-                <h3>Amazing</h3>
-                <p>
+                <p className={styles.author}>—Charles V.</p>
+                <ScorePanel className={styles.scorePanel} />
+                <h3 className={styles.cardTitle}>Amazing</h3>
+                <p className={styles.cardText}>
                   "Great. It does what you said it does in the ad. My pressure
                   is normal I only use on medication now instead of 3. Great
                   products"
@@ -100,10 +85,10 @@ const ThirteenthMainPart: FC = () => {
                 alt="thirteenthImg4"
               />
               <div className={styles.cardBottom}>
-                <p>–Steve I.</p>
-                score
-                <h3>UNBELIEVABLE</h3>
-                <p>
+                <p className={styles.author}>–Steve I.</p>
+                <ScorePanel className={styles.scorePanel} />
+                <h3 className={styles.cardTitle}>UNBELIEVABLE</h3>
+                <p className={styles.cardText}>
                   "This all natural product is the bomb.It will definitely put
                   your blood pressure back in the healthy range, with no side
                   effects. your Doctor will be amassed and start to wean you off
@@ -112,15 +97,12 @@ const ThirteenthMainPart: FC = () => {
               </div>
             </div>
           )}
-          <div>
-            {currentCard}
-            <button onClick={handleChangeCard} name="decrement">
-              -
-            </button>
-            <button onClick={handleChangeCard} name="increment">
-              +
-            </button>
-          </div>
+          <PaginationBox
+            currentNum={currentCard}
+            allNum={4}
+            onChange={setCurrentCard}
+            color="white"
+          />
         </div>
       )}
       {isDesktop && (

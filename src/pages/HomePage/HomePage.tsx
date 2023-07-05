@@ -20,6 +20,7 @@ import FourteenthMainPart from "../../components/FourteenthMainPart/FourteenthMa
 import FifteenthMainPart from "../../components/FifteenthMainPart/FifteenthMainPart";
 import CustomerFaqMainPart from "../../components/CustomerFaqMainPart/CustomerFaqMainPart";
 import ReviewsMainPart from "../../components/ReviewsMainPart/ReviewsMainPart";
+import cn from "clsx";
 
 const HomePage: FC = () => {
   return (
@@ -72,7 +73,7 @@ const HomePage: FC = () => {
           <EleventhMainPart />
         </Container>
       </section>
-      <section>
+      <section className={styles.sectionWithPt80}>
         <Container>
           <TwelfthMainPart />
         </Container>
@@ -82,12 +83,13 @@ const HomePage: FC = () => {
           <ThirteenthMainPart />
         </Container>
       </section>
-      <section className={styles.blueSection}>
+
+      <section className={cn(styles.blueSection, styles.withMargin)}>
         <Container>
           <FourteenthMainPart />
         </Container>
       </section>
-      <section>
+      <section className={styles.sectionWithPt80}>
         <Container>
           <FifteenthMainPart />
         </Container>

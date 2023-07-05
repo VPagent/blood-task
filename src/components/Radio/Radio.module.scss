@@ -1,0 +1,50 @@
+.label {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input {
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.bigCircle {
+  // position: absolute;
+  // top: 0px;
+  // left: 0px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+
+  border: 2px solid var(--border-color);
+  transition: border 250ms ease-in-out;
+}
+
+.bigCircle.checked {
+  border: 2px solid var(--orange-color);
+}
+
+.smallCircle {
+  display: block;
+  opacity: 0;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+
+  background-color: var(--orange-color);
+  transition: opacity 250ms ease-in-out;
+}
+
+.smallCircle.checked {
+  opacity: 1;
+}

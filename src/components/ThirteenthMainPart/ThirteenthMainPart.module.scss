@@ -1,11 +1,25 @@
+@import "../../static/sass/mixins.scss";
+
 .wrapper {
   padding: 0px 16px;
 }
 
+.sectionTitle {
+  @include sectionTitle();
+}
+
+.fakeSlider {
+  margin-top: 40px;
+}
+
 .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   width: 100%;
 
-  border-radius: 22px;
+  border-radius: 40px;
 
   overflow: hidden;
 }
@@ -17,5 +31,33 @@
 }
 
 .cardBottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   padding: 18px;
+
+  background-color: white;
+}
+
+.author {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.scorePanel {
+  margin-top: 10px;
+}
+
+.cardTitle {
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.cardText {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 18px;
 }

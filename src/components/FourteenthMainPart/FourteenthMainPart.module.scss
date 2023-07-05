@@ -1,0 +1,55 @@
+@import "../../static/sass/mixins.scss";
+
+.wrapper {
+  padding: 0px 16px;
+}
+
+.sectionTitle {
+  @include sectionTitle();
+}
+
+.imgWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 40px;
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.img2 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.cardBottomBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.secondaryTitle {
+  margin-top: 30px;
+
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.text {
+  margin-top: 10px;
+
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+}
+
+.rewardsPanel {
+  margin-top: 20px;
+}

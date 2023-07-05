@@ -6,8 +6,10 @@ import RewardsPanel from "../RewardsPanel/RewardsPanel";
 
 const FourteenthMainPart: FC = () => {
   return (
-    <div>
-      <h2>We Are Confident You'll Love it Or Your Money Back!</h2>
+    <div className={styles.wrapper}>
+      <h2 className={styles.sectionTitle}>
+        We Are Confident You'll Love it Or Your Money Back!
+      </h2>
       <div className={styles.imgWrapper}>
         <img className={styles.img} src={fourteenthImg1} alt="fourteenthImg1" />
         <img
@@ -16,15 +18,15 @@ const FourteenthMainPart: FC = () => {
           alt="fourteenthImg2"
         />
       </div>
-      <div>
-        <p>30-Day Money-Back Guarantee</p>
-        <p>
+      <div className={styles.cardBottomBox}>
+        <p className={styles.secondaryTitle}>30-Day Money-Back Guarantee</p>
+        <p className={styles.text}>
           All products come with a 30-day money-back guarantee. If the product
           does not work for you, simply return it, and we will issue you a full
           refund, no questions asked.
         </p>
       </div>
-      <RewardsPanel />
+      <RewardsPanel className={styles.rewardsPanel} />
     </div>
   );
 };

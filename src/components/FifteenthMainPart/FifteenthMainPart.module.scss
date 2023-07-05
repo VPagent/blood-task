@@ -1,0 +1,11 @@
+@import "../../static/sass/mixins.scss";
+
+.sectionTitle {
+  @include sectionTitle();
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
