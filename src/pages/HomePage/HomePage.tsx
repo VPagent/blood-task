@@ -99,7 +99,7 @@ const HomePage: FC = () => {
           <CustomerFaqMainPart />
         </Container>
       </section>
-      <section>
+      <section className={styles.sectionWithPt80}>
         <Container>
           <ReviewsMainPart />
         </Container>

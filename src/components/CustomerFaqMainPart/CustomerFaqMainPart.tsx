@@ -6,7 +6,7 @@ import CustomerFaqCard from "../CustomerFaqCard/CustomerFaqCard";
 const CustomerFaqMainPart: FC = () => {
   return (
     <div>
-      <h2>Customer FAQ</h2>
+      <h2 className={styles.sectionTitle}>Customer FAQ</h2>
       <div className={styles.list}>
         {faqData && faqData.map((item) => <CustomerFaqCard item={item} />)}
       </div>

@@ -5,15 +5,16 @@ import cn from "clsx";
 
 type Props = {
   className?: string;
+  iconClass?: string;
 };
-const ScorePanel: FC<Props> = ({ className }) => {
+const ScorePanel: FC<Props> = ({ className, iconClass }) => {
   return (
     <div className={cn(styles.box, className)}>
-      <Star className={styles.icon} />
-      <Star className={styles.icon} />
-      <Star className={styles.icon} />
-      <Star className={styles.icon} />
-      <Star className={styles.icon} />
+      <Star className={cn(styles.icon, iconClass)} />
+      <Star className={cn(styles.icon, iconClass)} />
+      <Star className={cn(styles.icon, iconClass)} />
+      <Star className={cn(styles.icon, iconClass)} />
+      <Star className={cn(styles.icon, iconClass)} />
     </div>
   );
 };

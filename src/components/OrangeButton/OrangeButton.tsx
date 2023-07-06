@@ -6,9 +6,15 @@ type Props = {
   children: string | ReactNode;
   onClick?: () => void;
   className?: string;
+  textClassName?: string;
 };
 
-const OrangeButton: FC<Props> = ({ children, onClick, className }) => {
+const OrangeButton: FC<Props> = ({
+  children,
+  onClick,
+  className,
+  textClassName,
+}) => {
   const handleClick = () => {
     if (onClick) {
       onClick();
@@ -20,7 +26,7 @@ const OrangeButton: FC<Props> = ({ children, onClick, className }) => {
       onClick={handleClick}
       type="button"
     >
-      <p className={styles.btnText}>{children}</p>
+      <p className={cn(styles.btnText, textClassName)}>{children}</p>
     </button>
   );
 };

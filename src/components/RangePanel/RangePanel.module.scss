@@ -1,0 +1,13 @@
+.allRange {
+  display: flex;
+
+  height: 6px;
+  border-radius: 4px;
+
+  background-color: var(--range-color-grey);
+}
+
+.currRange {
+  border-radius: 4px;
+  background-color: black;
+}

@@ -1,6 +1,8 @@
 @import "./static/sass/reset.scss";
 @import "./static/sass/variables.scss";
+@import "./static/sass/mixins.scss";
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&family=Work+Sans:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Varela+Round&family=Work+Sans:wght@400;500;600;700;800&display=swap");
 
 body {
   margin: 0;

@@ -1,0 +1,51 @@
+.card {
+  border-top: 1px solid var(--section-title-color);
+  padding: 20px 0px;
+
+  &:last-of-type {
+    border-bottom: 1px solid var(--section-title-color);
+  }
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardTitle {
+  font-weight: 800;
+  font-size: 24px;
+}
+
+.cardText {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  font-weight: 400;
+  font-size: 20px;
+}
+.openCloseBtn {
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+  transition: transform 250ms ease-in-out;
+}
+
+.btnIsOpen {
+  transform: rotate(45deg);
+}
+
+.closeIcon {
+  transform: rotate(45deg);
+}
+
+.hidePart {
+  height: 0px;
+  overflow: hidden;
+}
+
+.hidePart.isOpen {
+  height: max-content;
+}

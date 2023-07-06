@@ -45,7 +45,12 @@ const FifteenthPartCard: FC<Props> = ({ item }) => {
       )}
     >
       {(isHigh || isMiddle) && (
-        <div className={styles.specialDescriptionBox}>
+        <div
+          className={cn(
+            styles.specialDescriptionBox,
+            isMiddle && styles.itsMiddle
+          )}
+        >
           <h3 className={styles.specialTitle}>{specialTitle}</h3>
           <p className={styles.specialText}>{specialText}</p>
         </div>
@@ -75,16 +80,18 @@ const FifteenthPartCard: FC<Props> = ({ item }) => {
               name="description"
               value="Subscribe"
               label={
-                <p className={styles.subscribeText}>
-                  Subscribe and Save ${subscribe}
-                </p>
+                <div className={styles.labelBox}>
+                  <p className={styles.subscribeText}>
+                    Subscribe and Save ${subscribe}
+                  </p>
+                  <p className={styles.receiveText}>
+                    Receive this bundle {month} months, cancel anytime
+                  </p>
+                </div>
               }
               checkIdentifier={checkIdentifier}
               onChange={handleChangeInput}
             />
-            <span className={styles.receiveText}>
-              Receive this bundle {month} months, cancel anytime
-            </span>
           </div>
           <div className={styles.radioWrapper}>
             <Radio
@@ -92,16 +99,21 @@ const FifteenthPartCard: FC<Props> = ({ item }) => {
               name="description"
               value="Purchase"
               label={
-                <p className={styles.subscribeText}>
-                  One time purchase for ${purchase}
-                </p>
+                <div className={styles.labelBox}>
+                  <p className={styles.subscribeText}>
+                    One time purchase for ${purchase}
+                  </p>
+                </div>
               }
               checkIdentifier={checkIdentifier}
               onChange={handleChangeInput}
             />
           </div>
         </div>
-        <OrangeButton className={styles.orangeBtn}>
+        <OrangeButton
+          className={styles.orangeBtn}
+          textClassName={styles.btnText}
+        >
           Subscribe Now - Risk Free
         </OrangeButton>
         <div className={styles.cardFooter}>

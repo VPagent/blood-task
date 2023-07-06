@@ -1,0 +1,9 @@
+@import "../../static/sass/mixins.scss";
+
+.sectionTitle {
+  @include sectionTitle();
+}
+
+.list {
+  margin-top: 68px;
+}

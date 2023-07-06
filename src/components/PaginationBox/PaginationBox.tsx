@@ -35,7 +35,7 @@ const PaginationBox: FC<Props> = ({ currentNum, allNum, onChange, color }) => {
         />
       </button>
       <p className={cn(styles.paginationNum, isWhite && styles.whiteText)}>
-        {currentNum}/4
+        {currentNum}/{allNum}
       </p>
       <button
         className={styles.paginationBtn}

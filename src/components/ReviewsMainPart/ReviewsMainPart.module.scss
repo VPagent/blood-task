@@ -1,0 +1,164 @@
+@import "../../static/sass/mixins.scss";
+
+.sectionTitle {
+  @include sectionTitle();
+
+  text-align: start;
+}
+
+.list {
+  margin-top: 40px;
+}
+
+.listItem {
+  padding: 15px 0px;
+  &:not(:last-of-type) {
+    border-bottom: 1px solid var(--thirdPart-text-color);
+  }
+}
+
+.listItemTitle {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.imageBox {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.scoreBox {
+  display: flex;
+  align-items: center;
+}
+
+.scoreNum {
+  margin-right: 5px;
+
+  font-weight: 500;
+  font-size: 40px;
+}
+
+.starIcon {
+  width: 36px;
+  height: 36px;
+  fill: var(--star-color);
+}
+
+.countBox {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 20px;
+}
+
+.rangeBox {
+  display: flex;
+  align-items: center;
+  &:not(:first-of-type) {
+    margin-top: 10px;
+  }
+}
+
+.range {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.rangeText {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.videoBox {
+  margin-top: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.iframeVideo {
+  width: 58px;
+  height: 58px;
+
+  border-radius: 2px;
+
+  &:not(:last-of-type) {
+    margin-right: 14px;
+  }
+}
+
+.imageList {
+  margin-top: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.userImage {
+  width: 58px;
+  height: 58px;
+
+  border-radius: 2px;
+
+  &:not(:last-of-type) {
+    margin-right: 14px;
+  }
+}
+
+.listItemHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.userNameBox {
+  display: flex;
+  align-items: center;
+}
+
+.userNameText {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.verification {
+  margin-left: 10px;
+
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--green-color);
+}
+
+.userDate {
+  margin-top: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--userComment-date-color);
+}
+
+.scorePanel {
+  margin-top: 4px;
+}
+
+.scoreIcons {
+  fill: var(--star-color);
+}
+
+.userInfoText {
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.userCommentImage {
+  width: 80px;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 2px;
+}

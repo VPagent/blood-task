@@ -4,15 +4,15 @@ import Container from "../Container/Container";
 
 const Footer: FC = () => {
   return (
-    <footer>
+    <footer className={styles.footer}>
       <Container>
-        <p>
+        <p className={styles.topText}>
           †Disclaimer: These statements have not been evaluated by the Food and
           Drug Administration. These products are not intended to diagnose,
           treat, cure or prevent any disease. Product results may vary from
           person to person.
         </p>
-        <p>
+        <p className={styles.bottomText}>
           Information provided on this site is solely for informational purposes
           only. It is not a substitute for professional medical advice. Do not
           use this information for diagnosing or treating a health problem or
@@ -31,7 +31,9 @@ const Footer: FC = () => {
           not take any supplements without first consulting and obtaining the
           approval of your healthcare provider.
         </p>
-        <p>© 2021 Copyright. All rights reserved.</p>
+        <p className={styles.copyRightText}>
+          © 2021 Copyright. All rights reserved.
+        </p>
       </Container>
     </footer>
   );

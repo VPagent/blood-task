@@ -1,0 +1,9 @@
+.icon {
+  fill: var(--scorePanel-stars-color);
+
+  margin-right: 4px;
+
+  &:last-of-type {
+    margin-right: 0px;
+  }
+}

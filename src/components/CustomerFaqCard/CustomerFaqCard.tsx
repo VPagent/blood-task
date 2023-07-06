@@ -1,5 +1,7 @@
 import { FC, useState } from "react";
 import styles from "./CustomerFaqCard.module.scss";
+import cn from "clsx";
+import { ReactComponent as CloseIcon } from "../../static/icons/closePlus.svg";
 
 type Props = {
   item: any;
@@ -12,16 +14,20 @@ const CustomerFaqCard: FC<Props> = ({ item }) => {
   const toggleOpenInfo = () => {
     setIsOpen(!isOpen);
   };
+
   return (
-    <div>
-      <div>
-        <p>{title}</p>
-        <button className={styles.openCloseBtn} onClick={toggleOpenInfo}>
-          close
+    <div className={styles.card}>
+      <div className={styles.cardHeader}>
+        <p className={styles.cardTitle}>{title}</p>
+        <button
+          className={cn(styles.openCloseBtn, isOpen && styles.btnIsOpen)}
+          onClick={toggleOpenInfo}
+        >
+          <CloseIcon className={styles.closeIcon} />
         </button>
-        <div className={styles.hidePart}>
-          <p>{text}</p>
-        </div>
+      </div>
+      <div className={cn(styles.hidePart, isOpen && styles.isOpen)}>
+        <p className={styles.cardText}>{text}</p>
       </div>
     </div>
   );

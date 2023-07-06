@@ -22,6 +22,8 @@
 
 .listItem {
   display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 
   &:not(:first-of-type) {
     margin-top: 20px;
@@ -29,18 +31,21 @@
 }
 
 .checkIcon {
+  flex-grow: 1;
   display: block;
   width: 20px;
   height: 20px;
 }
 
 .listItemText {
+  width: fit-content;
+  display: flex;
   margin-left: 10px;
   align-items: flex-start;
 
   font-weight: 400;
   font-size: 24px;
-  line-height: 1.2;
+  line-height: 28px;
 }
 
 .btnWrapper {
