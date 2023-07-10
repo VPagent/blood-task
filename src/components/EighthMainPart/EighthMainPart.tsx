@@ -5,11 +5,20 @@ import { ReactComponent as Icon2 } from "../../static/icons/8_2.svg";
 import { ReactComponent as Icon3 } from "../../static/icons/8_3.svg";
 import { ReactComponent as Icon4 } from "../../static/icons/8_4.svg";
 import OrangeButton from "../OrangeButton/OrangeButton";
+import { useMediaReq } from "../../helpers/response";
 
 const EighthMainPart: FC = () => {
+  const isDesktop = useMediaReq();
+
   return (
     <div>
       <h2 className={styles.sectionTitle}>Subscribe & Save</h2>
+      {isDesktop && (
+        <p className={styles.desktopText}>
+          Subscribe and save as much as 38% of every order. Plus get free gifts
+          and fast shipping.
+        </p>
+      )}
       <div className={styles.list}>
         <div className={styles.listItem}>
           <Icon1 />
@@ -36,7 +45,9 @@ const EighthMainPart: FC = () => {
           <p className={styles.listItemText}>Protected from TikTok sell-outs</p>
         </div>
       </div>
-      <OrangeButton onClick={() => {}}>TRY IT NOW - RISK FREE</OrangeButton>
+      <OrangeButton className={styles.button} onClick={() => {}}>
+        TRY IT NOW - RISK FREE
+      </OrangeButton>
     </div>
   );
 };

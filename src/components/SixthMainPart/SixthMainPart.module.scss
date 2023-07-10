@@ -6,6 +6,11 @@
 
 .list {
   padding-top: 40px;
+  @media screen and (min-width: 1920px) {
+    padding-top: 80px;
+
+    display: flex;
+  }
 }
 
 .card {
@@ -17,6 +22,17 @@
   border-radius: 22px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   overflow: hidden;
+
+  @media screen and (min-width: 1920px) {
+    margin-right: 15px;
+    margin-left: 15px;
+    &:last-of-type {
+      margin-right: 0px;
+    }
+    &:first-of-type {
+      margin-left: 0px;
+    }
+  }
 }
 
 .decorImg {
@@ -38,8 +54,16 @@
   font-size: 60px;
 }
 
+.contentImg {
+  @media screen and (min-width: 1920px) {
+    flex-grow: 1;
+  }
+}
+
 .cardFooter {
   padding: 30px 16px;
+  @media screen and (min-width: 1920px) {
+  }
 }
 
 .cardTitle {
@@ -64,4 +88,12 @@
   margin-right: auto;
   margin-top: 20px;
   margin-bottom: 20px;
+  @media screen and (min-width: 1920px) {
+    display: flex;
+    width: 120px;
+    height: 80px;
+    transform: rotate(-90deg);
+    margin-top: auto;
+    margin-bottom: auto;
+  }
 }

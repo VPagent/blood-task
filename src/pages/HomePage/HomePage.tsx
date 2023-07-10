@@ -3,7 +3,6 @@ import styles from "./HomePage.module.scss";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import FirstMainPart from "../../components/FirstMainPart";
-import SecondMainPart from "../../components/SecondMainPart";
 import Container from "../../components/Container";
 import ThirdMainPart from "../../components/ThirdMainPart";
 import FourthMainPart from "../../components/FourthMainPart";
@@ -21,15 +20,16 @@ import FifteenthMainPart from "../../components/FifteenthMainPart/FifteenthMainP
 import CustomerFaqMainPart from "../../components/CustomerFaqMainPart/CustomerFaqMainPart";
 import ReviewsMainPart from "../../components/ReviewsMainPart/ReviewsMainPart";
 import cn from "clsx";
+import { useMediaReq } from "../../helpers/response";
 
 const HomePage: FC = () => {
+  const isDesktop = useMediaReq();
   return (
     <>
       <Header />
       <section>
         <Container>
           <FirstMainPart />
-          <SecondMainPart />
         </Container>
       </section>
       <section className={styles.sectionWithPt80}>
@@ -37,8 +37,8 @@ const HomePage: FC = () => {
           <ThirdMainPart />
         </Container>
       </section>
-      <section className={styles.blueSection}>
-        <Container>
+      <section className={cn(styles.blueSection, styles.thirdSection)}>
+        <Container className={isDesktop && styles.desktopContainer}>
           <FourthMainPart />
           <FifthMainPart />
         </Container>

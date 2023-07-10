@@ -6,7 +6,13 @@ import walmart from "../../static/png/3_2.png";
 import tiktok from "../../static/png/3_3.png";
 import meta from "../../static/png/3_4.png";
 import google from "../../static/png/3_5.png";
+import amazonD from "../../static/png/amazonD.png";
+import walmartD from "../../static/png/welmartD.png";
+import tiktokD from "../../static/png/titokD.png";
+import metaD from "../../static/png/metaD.png";
+import googleD from "../../static/png/googleD.png";
 import ScorePanel from "../ScorePanel/ScorePanel";
+import { thirdData } from "./data";
 
 const ThirdMainPart: FC = () => {
   const isDesktop = useMediaQuery({
@@ -20,81 +26,67 @@ const ThirdMainPart: FC = () => {
       )}
       {!isDesktop && <h2 className={styles.sectionTitle}>Customers Results</h2>}
       <div className={styles.list}>
-        <div className={styles.card}>
-          <div className={styles.smallWrapper}>
-            <iframe
-              className={styles.video}
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/JFFq8xgBQZI"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            ></iframe>
-          </div>
-          <div className={styles.cardContentBox}>
-            <h3 className={styles.cardTitle}>
-              "My blood pressure has dropped"
-            </h3>
-            <ScorePanel className={styles.scorePanel} />
-            <div className={styles.smallWrapper}>
-              <p className={styles.cardText}>
-                "It was pretty good. My blood pressure has dropped and I've been
-                feeling pretty good. I got more energy too."
-              </p>
-              <span className={styles.author}>—Dwight C.</span>
+        {thirdData &&
+          thirdData.map(({ text, title, src, author }) => (
+            <div className={styles.card}>
+              <div className={styles.smallWrapper}>
+                <iframe
+                  className={styles.video}
+                  src={src}
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                ></iframe>
+              </div>
+              <div className={styles.cardContentBox}>
+                <h3 className={styles.cardTitle}>{title}</h3>
+                <ScorePanel className={styles.scorePanel} />
+                <div className={styles.cardTextWrapper}>
+                  <p className={styles.cardText}>{text}</p>
+                  <span className={styles.author}>{author}</span>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div className={styles.card}>
-          <div className={styles.smallWrapper}>
-            <iframe
-              className={styles.video}
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/JFFq8xgBQZI"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share, fullscreen"
-            ></iframe>
-          </div>
-          <div className={styles.cardContentBox}>
-            <h3 className={styles.cardTitle}>
-              "This has really worked for me"
-            </h3>
-            <ScorePanel className={styles.scorePanel} />
-            <div className={styles.smallWrapper}>
-              <p className={styles.cardText}>
-                "I was really happy that the day after I started taking this, my
-                BP dropped into the “green” range. 120/60 has been something I
-                have been unable to achieve in years on various BP meds. Now I
-                achieve numbers like that regularly. I do not yet know what
-                combination of meds and supplements will be the final solution
-                though I have no doubt this will be an important part of it.
-                Thank you!"
-              </p>
-            </div>
-            <span className={styles.author}>—David B.</span>
-          </div>
-        </div>
+          ))}
       </div>
-      <h2 className={styles.secondaryCardTitle}>As Seen On</h2>
+      <h2 className={styles.secondaryTitle}>As Seen On</h2>
       <div className={styles.logoList}>
-        <img className={styles.logoImage} src={amazon} alt="" />
+        <img
+          className={styles.logoImage}
+          src={!isDesktop ? amazon : amazonD}
+          alt=""
+        />
 
         <div className={styles.fakeBorder}></div>
 
-        <img className={styles.logoImage} src={walmart} alt="" />
+        <img
+          className={styles.logoImage}
+          src={!isDesktop ? walmart : walmartD}
+          alt=""
+        />
 
         <div className={styles.fakeBorder}></div>
 
-        <img className={styles.logoImage} src={tiktok} alt="" />
+        <img
+          className={styles.logoImage}
+          src={!isDesktop ? tiktok : tiktokD}
+          alt=""
+        />
 
         {isDesktop && <div className={styles.fakeBorder}></div>}
 
-        <img className={styles.logoImage} src={meta} alt="" />
+        <img
+          className={styles.logoImage}
+          src={!isDesktop ? meta : metaD}
+          alt=""
+        />
 
         <div className={styles.fakeBorder}></div>
 
-        <img className={styles.logoImage} src={google} alt="" />
+        <img
+          className={styles.logoImage}
+          src={!isDesktop ? google : googleD}
+          alt=""
+        />
       </div>
     </div>
   );

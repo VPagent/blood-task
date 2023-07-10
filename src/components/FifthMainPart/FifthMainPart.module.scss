@@ -1,5 +1,11 @@
 .sectionWrapper {
   margin-top: 46px;
+
+  @media screen and (min-width: 1920px) {
+    position: relative;
+    flex-grow: 1;
+    margin-top: 0px;
+  }
 }
 
 .mainImage {
@@ -7,11 +13,98 @@
 
   width: 340px;
   height: auto;
+
+  @media screen and (min-width: 1920px) {
+    width: 716px;
+
+    margin-left: auto;
+  }
+}
+
+.list {
+  @media screen and (min-width: 1920px) {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+    // padding-top: 60px;
+  }
 }
 
 .listItem {
   &:not(:first-of-type) {
     margin-top: 20px;
+  }
+  @media screen and (min-width: 1920px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.listItem.firstItem {
+  @media screen and (min-width: 1920px) {
+    width: 428px;
+    margin-top: 4%;
+
+    .cursor {
+      transform: translateY(-12px);
+    }
+
+    .itemTitle {
+      width: 260px;
+    }
+
+    .listItemFooter {
+      width: 356px;
+    }
+  }
+}
+
+.listItem.secondItem {
+  @media screen and (min-width: 1920px) {
+    width: 394px;
+    margin-top: 32%;
+
+    .cursor {
+      margin-left: auto;
+      transform: translate(20px, -12px);
+    }
+
+    .itemTitle {
+      width: min-content;
+    }
+  }
+}
+
+.listItem.thirdItem {
+  @media screen and (min-width: 1920px) {
+    position: absolute;
+    top: 25%;
+    right: -28%;
+
+    width: 482px;
+    margin-left: auto;
+
+    .listItemHeader {
+    }
+
+    .cursor {
+      position: absolute;
+      top: 8px;
+      left: -158px;
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    .listItemFooter {
+      width: 333px;
+    }
   }
 }
 
@@ -25,6 +118,30 @@
   font-weight: 800;
   font-size: 26px;
   text-transform: uppercase;
+}
+
+.cursor {
+  display: flex;
+  flex-grow: 1;
+  width: 130px !important;
+  align-items: center;
+}
+
+.longPart {
+  flex-grow: 1;
+  height: 2px;
+  width: 100%;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  background-color: var(--green-color);
+}
+
+.smallCircle {
+  width: 10px;
+  height: 10px;
+  margin-left: auto;
+  border-radius: 50%;
+  background-color: var(--green-color);
 }
 
 .listItemFooter {
